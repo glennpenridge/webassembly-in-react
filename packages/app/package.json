@@ -46,7 +46,7 @@
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "webassembly": "file:../webassembly/pkg",
+    "webassembly-app": "file:../webassembly/pkg",
     "webpack": "^4.29.3"
   },
   "devDependencies": {

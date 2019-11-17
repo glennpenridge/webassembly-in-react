@@ -5791,7 +5791,7 @@ wbuf@^1.1.0, wbuf@^1.7.3:
   dependencies:
     minimalistic-assert "^1.0.0"
 
-"webassembly@file:../webassembly/pkg":
+"webassembly-app@file:../webassembly/pkg":
   version "0.1.0"
 
 webpack-cli@^3.1.0:
