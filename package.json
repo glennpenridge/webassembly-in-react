@@ -1,0 +1,11 @@
+{
+  "name": "react-in-webassembly",
+  "version": "1.0.0",
+  "description": "An example of how to integrate Webassembly components with React.JS.",
+  "main": "index.js",
+  "author": "Glenn Penridge <glenn@eezeeco.com>",
+  "license": "MIT",
+  "dependencies": {
+    "chokidar": "^3.3.0"
+  }
+}
