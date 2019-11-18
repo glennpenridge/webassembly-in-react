@@ -3,19 +3,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import * as wasm from 'webassembly-app';
 
+import Greet from './components/Greet';
 import InputGreeting from './components/InputGreeting';
 import WasmFunctionalComponent from './components/WasmFunctionalComponent';
-import Fibonacci from './components/Fibonnaci';
+import Fibonacci from './components/Fibonacci';
 
 const foo = new wasm.Foo();
 
 const App = ({ title }) => (
   <div>
     <h1>{title}</h1>
-    <h3>Webassembly function bound to a button in React:</h3>
-    <button type="button" onClick={() => wasm.greet()}>
-      Greet
-    </button>
+    <hr />
+    <Greet />
     <hr />
     <InputGreeting />
     <hr />

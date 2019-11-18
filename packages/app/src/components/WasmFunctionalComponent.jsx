@@ -15,6 +15,8 @@ const WasmFunctionalComponent = ({ wasmClass, ...rest }) => {
     updatePerfTime(performance.now());
   };
 
+  console.log(wasmClass);
+
   return (
     <div cache={perfTime} {...rest}>
       <h3>

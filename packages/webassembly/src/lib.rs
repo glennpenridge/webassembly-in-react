@@ -14,13 +14,13 @@ extern {
 }
 
 #[wasm_bindgen]
-pub fn greet() {
-    alert("Hello, webassembly!");
+pub fn input_greeting(name: &str) {
+    alert(&format!("Hello, {}", name));
 }
 
 #[wasm_bindgen]
-pub fn input_greeting(name: &str) {
-    alert(&format!("Hello, {}", name));
+pub fn greet() {
+    alert("Hello, BrisReact!");
 }
 
 #[wasm_bindgen]
