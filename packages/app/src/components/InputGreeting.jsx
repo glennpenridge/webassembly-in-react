@@ -1,24 +1,16 @@
 /* eslint import/no-unresolved: [2, { ignore: ['webassembly-app$'] }] */
 import React from 'react';
-import {
-  input_greeting as inputGreeting,
-  Foo,
-} from 'webassembly-app';
+import { input_greeting as inputGreeting } from 'webassembly-app';
 
 class InputGreeting extends React.Component {
   constructor(props) {
     super(props);
 
-    const value = new Foo();
-
     this.state = {
       greeting: '',
-      value,
     };
 
     this.setGreeting = this.setGreeting.bind(this);
-    this.getValue = this.getValue.bind(this);
-    this.setValue = this.setValue.bind(this);
   }
 
   setGreeting(event) {
@@ -27,23 +19,15 @@ class InputGreeting extends React.Component {
     });
   }
 
-  getValue() {
-    const { value } = this.state;
-    value.alert_current_internal_value();
-  }
-
-  setValue(event) {
-    const { value } = this.state;
-    const num = parseInt(event.target.value, 10);
-
-    this.forceUpdate(() => value.set(num));
-  }
-
   render() {
-    const { greeting, value } = this.state;
+    const { greeting } = this.state;
 
     return (
       <div>
+        <h3>
+          Using traditional React state to send a string to a function
+          defined in Webassembly:
+        </h3>
         <div>
           <input
             type="text"
@@ -56,16 +40,6 @@ class InputGreeting extends React.Component {
             onClick={() => inputGreeting(greeting)}
           >
             Greet
-          </button>
-        </div>
-        <div>
-          <input
-            type="text"
-            defaultValue={value.get()}
-            onChange={event => this.setValue(event)}
-          />
-          <button type="button" onClick={() => this.getValue()}>
-            Get current value
           </button>
         </div>
       </div>

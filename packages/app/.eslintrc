@@ -3,7 +3,9 @@
   "extends": ["airbnb", "prettier"],
   "plugins": ["prettier"],
   "rules": {
-    "prettier/prettier": [1]
+    "prettier/prettier": [0],
+    "react/jsx-props-no-spreading": [0],
+    "no-const-assign": [0]
   },
   "env": {
     "browser": true
